@@ -16,6 +16,10 @@ INCLUDEPATH += $$PWD/../HelloWorld
 
 include($$PWD/../HelloWorld/helloworldCommon.pri)
 
+LIBS += -L"$$OUT_PWD/../HelloWorld/release"
+LIBS += -lHelloWorld
+
+message("Searching libs here $$LIBS")
 
 SOURCES += tst_someunittesttest.cpp
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
